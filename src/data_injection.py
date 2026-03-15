@@ -10,7 +10,7 @@ df= df.pivot_table(index='Customer Code',
                    columns='Sales UOM',
                    values='Quantity Sold',
                    aggfunc = 'sum',
-                   
+                   fill_value=0
                    )
 
 df.to_csv(os.path.join('data','sales.csv'))
